@@ -1,0 +1,16 @@
+{/partial}}
+
+
+        {{#partial "content"}}
+<div class="text-center">
+    <h2><u>{{hero.name}}</u></h2>
+    <p>{{hero.age}}</p>
+    <p>{{hero.power}}</p>
+    <p>{{hero.weakness}}</p>
+
+    <a class="btn btn-outline-primary" href="/heroes/{{hero.heroID}}/update">Update Info</a>
+    <a class="btn btn-outline-danger" href="/heroes/{{hero.heroID}}/remove">Delete Permanently</a>
+</div>
+
+        {{/partial}}
+        {{> layout.hbs}}

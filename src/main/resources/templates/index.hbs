@@ -1,0 +1,24 @@
+
+
+{{#partial "content"}}
+
+<h1>Hero list!</h1>
+
+</div>
+
+        {{#if posts}}
+        {{#each posts }}
+<p>Current post:</p>
+<p>{{ name }} <a href="/hero/{{id}}">details...</a></p>
+        {{/each}}
+        {{else}}
+<p>No heroes</p>
+        {{/if}}
+<div class="row">
+<div class="col-md-3"><p>Heroes Registered: {{totalHeroes}}</p></div>
+<div class="col-md-3"><p>Squads Present: {{totalSquads}}</p></div>
+<div class="col-md-3"><p>Heroes w/ squads: {{squadfullHeroes}}</p></div>
+<div class="col-md-3"><p>Heroes without squads: {{squadlessHeroes}}</p></div>
+        {{/partial}}
+
+        {{> layout.hbs}}
