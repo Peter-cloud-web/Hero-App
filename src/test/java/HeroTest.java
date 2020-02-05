@@ -29,19 +29,19 @@ public class HeroTest {
     public void getHeroAge_int() {
         Hero hero = setupHero();
         assertEquals(180, hero.getAge());
-//    }
+   }
+
+    @Test
+    public void getHeroPower_true() {
+        Hero hero = setupHero();
+        assertEquals("Almost everything",hero.getPower());
+    }
 //
-//    @Test
-//    public void getHeroPower_true() {
-//        Hero newHero = setupNewHero();
-//        assertTrue(newHero.getPower() instanceof String);
-//    }
-//
-//    @Test
-//    public void getHeroWeakness_true() {
-//        Hero newHero = setupNewHero();
-//        assertTrue(newHero.getWeakness() instanceof String);
-//    }
+    @Test
+    public void getHeroWeakness_true() {
+        Hero hero = setupHero();
+        assertEquals("Kryptonite",hero.getWeakness());
+    }
 //    @Test
 //    public void PostInstantiatesWithContent_true() throws Exception {
 //     Hero post = new Hero("Day 1:Intro");
@@ -114,4 +114,3 @@ public class HeroTest {
 //        }
 
     }
-}
