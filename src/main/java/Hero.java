@@ -9,11 +9,9 @@ public class Hero {
     private String squad;
     private static ArrayList<Hero> heroRegistry = new ArrayList<>();
     private int id;
-    private String content;
 
-    public Hero (String name,int age,String power,String weakness,String content){
+    public Hero (String name,int age,String power,String weakness){
         this.name = name;
-        this.content = content;
         this.age = age;
         this.power = power;
         this.weakness = weakness;
@@ -45,30 +43,5 @@ public class Hero {
         return heroRegistry.get(id - 1);
 
     }
-
-    public void deleteHero() {
-        heroRegistry.remove(id - 1);
-    }
-    public void updateSquad(String newSquad) {
-        this.squad = newSquad;
-    }
-
-    public void updateName(String newName) {
-        this.name = newName;
-    }
-
-    public void updateAge(int newAge) {
-        this.age = newAge;
-    }
-
-    public void updatePower(String newPower) {
-        this.power = newPower;
-    }
-
-    public void updateWeakness(String newWeakness) {
-        this.weakness = newWeakness;
-    }
-
-
 
 }

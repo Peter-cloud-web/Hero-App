@@ -4,7 +4,7 @@
 <h5><u>Heroes</u></h5>
     {{#if allHeroes}}
             {{#each allHeroes}}
-            <li class="list-group-item">{{name}} - <a href="/heroes/{{heroID}}">View Details</a></li>
+            <li class="list-group-item">{{name}} - <a href="/hero/{{id}}">View Details</a></li>
             {{/each}}
     {{else}}
     <p>No available heroes-<a href="/hero/new">register a hero</a>.</p>
@@ -12,7 +12,7 @@
     <h5><u>Squads</u></h5>
     {{#if allSquads}}
             {{#each allSquads}}
-            <li class="list-group-item">{{name}} - <a href="/squads/{{squadId}}">View Details</a></li>
+            <li class="list-group-item">{{name}} - <a href="/squad/{{id}}">View Details</a></li>
             {{/each}}
         </ul>
     {{else}}
