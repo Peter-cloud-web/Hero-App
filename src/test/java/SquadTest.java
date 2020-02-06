@@ -13,6 +13,9 @@ public class SquadTest {
     private Squad setupSquad() {
         return new Squad("legacy","bad guys");
     }
+    private Hero setupNewHero() {
+        return new Hero("Batman", 45, "Money", "Loneliness");
+    }
     @Test
     public void NewSquadObjectGetsCorrectlyCreated_true() throws Exception {
         Squad squad = setupSquad();
@@ -29,7 +32,7 @@ public class SquadTest {
         assertEquals("bad guys", squad.getCause());
     }
 
-    @After
+        @After
     public void tearDown() throws Exception {
     }
 }
