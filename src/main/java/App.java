@@ -49,20 +49,20 @@ public class App {
             return new ModelAndView(model, "squad-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/heroes", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            model.put("allHeroes", Hero.getAllHeroes());
-            model.put("allSquads", Squad.getAllSquad());
-            return new ModelAndView(model, "heroes-squads.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        get("/squad/:id", (req, res) -> {
-            Map<String, Object> model = new HashMap<>();
-            int idOfSquadToFind = Integer.parseInt(req.params("id"));
-            Squad foundSquad = Squad.findById(idOfSquadToFind);
-            model.put("squad",foundSquad);
-            return new ModelAndView(model, "squad-details.hbs"); //individual post page.
-        }, new HandlebarsTemplateEngine());
+//        get("/heroes", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            model.put("allHeroes", Hero.getAllHeroes());
+//            model.put("allSquads", Squad.getAllSquad());
+//            return new ModelAndView(model, "heroes-squads.hbs");
+//        }, new HandlebarsTemplateEngine());
+//
+//        get("/squad/:id", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            int idOfSquadToFind = Integer.parseInt(req.params("id"));
+//            Squad foundSquad = Squad.findById(idOfSquadToFind);
+//            model.put("squad",foundSquad);
+//            return new ModelAndView(model, "squad-details.hbs"); //individual post page.
+//        }, new HandlebarsTemplateEngine());
 
 
         get("/hero/:id", (req, res) -> {
