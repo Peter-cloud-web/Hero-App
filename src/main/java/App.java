@@ -44,7 +44,6 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
-
         get("/squad/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "squad-form.hbs");
@@ -72,51 +71,7 @@ public class App {
             Hero foundHero = Hero.findById(idOfHeroToFind);
             model.put("hero",foundHero);
             return new ModelAndView(model, "hero-detail.hbs"); //individual post page.
-        }, new HandlebarsTemplateEngine());
-
-;
-
-
-
-//        get("/hero/:id", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            int idOfPostToFind = Integer.parseInt(req.params("id")); //pull id - must match route segment
-//            Hero foundPost = Hero.findById(idOfPostToFind); //use it to find post
-//            model.put("hero", foundPost); //add it to model for template to display
-//            return new ModelAndView(model, "hero-detail.hbs"); //individual post page.
-//        }, new HandlebarsTemplateEngine());
-//
-//        get("/her/:id/update", (req,res)->{
-//            Map<String, Object> model = new HashMap<>();
-//            int idOfPostToEdit = Integer.parseInt(req.params("id"));
-//            Hero editPost = Hero.findById(idOfPostToEdit);
-//            model.put("editPost", editPost);
-//            return new ModelAndView(model, "squad-form.hbs");
-//
-//        } , new HandlebarsTemplateEngine());
-//        post("/posts/:id/update", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            String newContent = req.queryParams("content");
-//            int idOfPostToEdit = Integer.parseInt(req.params("id"));
-//            Hero editPost = Hero.findById(idOfPostToEdit);
-//            editPost.update(newContent); //don’t forget me
-//            return new ModelAndView(model, "success.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        get("/posts/:id/delete", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            int idOfPostToDelete = Integer.parseInt(req.params("id")); //pull id - must match route segment
-//            Hero deletePost = Hero.findById(idOfPostToDelete); //use it to find post
-//            deletePost.deletePost();
-//            return new ModelAndView(model, "success.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        get("/posts/delete", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            Hero.clearAllPosts();
-//            return new ModelAndView(model, "success.hbs");
-//        }, new HandlebarsTemplateEngine());
-
+        }, new HandlebarsTemplateEngine();
 
     }
     }
