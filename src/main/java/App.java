@@ -71,7 +71,7 @@ public class App {
             Hero foundHero = Hero.findById(idOfHeroToFind);
             model.put("hero",foundHero);
             return new ModelAndView(model, "hero-detail.hbs"); //individual post page.
-        }, new HandlebarsTemplateEngine();
+        }, new HandlebarsTemplateEngine());
 
     }
     }
