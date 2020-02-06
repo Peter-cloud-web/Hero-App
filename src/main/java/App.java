@@ -30,15 +30,15 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            ArrayList<Hero> heroes = Hero.getAllHeroes();
-//            int totalHeroes = Hero.getAllHeroes().size();
-//            int totalSquads = Squad.getAllSquad().size();
-//            model.put("totalHeroes",totalHeroes);
-//            model.put("totalSquads",totalSquads);
-//            return new ModelAndView(model, "index.hbs");
-//        }, new HandlebarsTemplateEngine());
+        get("/", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            ArrayList<Hero> heroes = Hero.getAllHeroes();
+            int totalHeroes = Hero.getAllHeroes().size();
+            int totalSquads = Squad.getAllSquad().size();
+            model.put("totalHeroes",totalHeroes);
+            model.put("totalSquads",totalSquads);
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
 
         get("/hero/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
