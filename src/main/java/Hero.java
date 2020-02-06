@@ -39,9 +39,9 @@ public class Hero {
     public int getId() {
         return id;
     }
-//    public static Hero findById(int id) {
-//        return heroRegistry.get(id - 1);
-//
-//    }
+    public static Hero findById(int id) {
+        return heroRegistry.get(id - 1);
+
+    }
 
 }
