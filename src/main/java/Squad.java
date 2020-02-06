@@ -2,10 +2,8 @@ import java.util.ArrayList;
 public class Squad {
     private String name;
     private String cause;
-//    private static ArrayList<Squad> squadList = new ArrayList<>();
+    private static ArrayList<Squad> squadList = new ArrayList<>();
     private int id;
-    private boolean isSquadFull = false;
-
 
     public Squad (String name,String cause){
         this.name = name;
