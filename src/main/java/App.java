@@ -56,12 +56,12 @@ public class App {
             return new ModelAndView(model, "heroes-squads.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/squad/:id", (req, res) -> {
+        get("/squad/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfSquadToFind = Integer.parseInt(req.params("id"));
             Squad foundSquad = Squad.findById(idOfSquadToFind);
             model.put("squad",foundSquad);
-            return new ModelAndView(model, "squad-details.hbs"); //individual post page.
+            return new ModelAndView(model, "squad-details.hbs"); //individual hero page.
         }, new HandlebarsTemplateEngine());
 
 
@@ -70,7 +70,7 @@ public class App {
             int idOfHeroToFind = Integer.parseInt(req.params("id"));
             Hero foundHero = Hero.findById(idOfHeroToFind);
             model.put("hero",foundHero);
-            return new ModelAndView(model, "hero-detail.hbs"); //individual post page.
+            return new ModelAndView(model, "hero-detail.hbs"); //individual hero page.
         }, new HandlebarsTemplateEngine());
 
     }
