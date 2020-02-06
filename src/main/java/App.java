@@ -65,7 +65,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-//        get("/hero/:id", (req, res) -> {
+        get("/hero/:id", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfHeroToFind = Integer.parseInt(req.params("id"));
             Hero foundHero = Hero.findById(idOfHeroToFind);
