@@ -21,9 +21,9 @@ public class Hero {
 
 
 
-//    public static ArrayList<Hero> getAllHeroes(){
-//        return heroRegistry;
-//    }
+    public static ArrayList<Hero> getAllHeroes(){
+        return heroRegistry;
+    }
     public String getName() {
         return name;
     }
@@ -39,9 +39,9 @@ public class Hero {
     public int getId() {
         return id;
     }
-    public static Hero findById(int id) {
-        return heroRegistry.get(id - 1);
-
-    }
+//    public static Hero findById(int id) {
+//        return heroRegistry.get(id - 1);
+//
+//    }
 
 }
